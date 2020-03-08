@@ -1,0 +1,7 @@
+<div class="thumbnail">
+  <fa-icon class="video-icon" *ngIf="path?.isVideo" [icon]="video"></fa-icon>
+  <span *ngIf="!!path">
+    <img *ngIf="path?.isImage" [lazyLoad]="'file:///' + src" alt="thumbnail"/>
+    <video *ngIf="path?.isVideo" [src]="'file:///' + src" [currentTime]="10"></video>
+  </span>
+</div>

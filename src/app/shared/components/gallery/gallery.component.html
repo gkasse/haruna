@@ -1,0 +1,15 @@
+<div class="row pt-2 pl-2 text-white">
+  <span class="pr-1" *ngIf="isMultiTagSearch">
+  <span class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-success" [class.active]="and.checked"><input type="radio" name="cond" (change)="condition = AND; loadImagesFromTag(target, AND)" checked #and>AND</label>
+    <label class="btn btn-success" [class.active]="or.checked"><input type="radio" name="cond" (change)="condition = OR; loadImagesFromTag(target, OR)" #or>OR</label>
+  </span>
+</span>
+  > {{ info }}
+</div>
+<div class="align-content-between" [class.gallery]="!isMultiTagSearch" [class.multi-tag-gallery]="isMultiTagSearch" #galleryRoot>
+  <app-thumbnail *ngFor="let file of thumbnails" [class.selected]="containsSelected(file)" [path]="file" (click)="openModal(file, $event)" (contextmenu)="openContextMenu(file)"></app-thumbnail>
+</div>
+<div class="row justify-content-center pt-2 pb-2">
+  <ngb-pagination [(page)]="page" [pageSize]="perPage" [collectionSize]="files.length" [maxSize]="5" [rotate]="true"></ngb-pagination>
+</div>

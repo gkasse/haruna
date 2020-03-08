@@ -1,0 +1,10 @@
+.tab-content {
+  background-color: #fff;
+  height: 100%;
+  max-height: calc(100vh - 42px);
+  overflow-x: scroll;
+}
+
+.tab-pane.active {
+  height: 100%;
+}

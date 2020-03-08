@@ -1,0 +1,44 @@
+.image {
+  display: flex;
+  justify-content: space-around;
+  user-select: none;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+
+  }
+}
+
+.next,
+.before {
+  height: 100%;
+  width: 25%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: red;
+  opacity: .3;
+
+  & > fa-icon {
+    visibility: hidden;
+  }
+}
+
+.next:hover > fa-icon,
+.before:hover > fa-icon {
+  visibility: visible;
+}
+
+.next {
+  padding-right: 10px;
+  left: 75%;
+  justify-content: flex-end;
+}
+
+.before {
+  left: 10px;
+  justify-content: flex-start;
+}

@@ -1,0 +1,13 @@
+<div class="row w-100 m-0">
+  <button class="btn btn-primary w-100" (click)="addNewTag()"><fa-icon class="pr-1" [icon]="faPlus"></fa-icon>新しいタグを追加</button>
+</div>
+<div class="tree-root pt-1">
+  <ul>
+    <li class="tag-group" *ngFor="let group of tagGroups">
+      <span (click)="group.isOpen = !group.isOpen">{{ group.name }}</span>
+      <ul>
+        <li class="tag" *ngFor="let tag of group.tags" (click)="toggleTag(tag, $event)" (contextmenu)="openContextMenu(tag)">{{ tag.name }}</li>
+      </ul>
+    </li>
+  </ul>
+</div>

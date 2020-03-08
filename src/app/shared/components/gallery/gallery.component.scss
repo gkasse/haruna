@@ -1,0 +1,45 @@
+.pagination {
+  margin: 0;
+}
+
+.gallery,
+.multi-tag-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+span.btn-group {
+  > .btn {
+    padding: .05rem .75rem;
+  }
+}
+
+.gallery {
+  height: calc(100vh - 86px);
+}
+
+.multi-tag-gallery {
+  height: calc(100vh - 90px);
+}
+
+app-thumbnail {
+  width: 170px;
+  height: 170px;
+
+  &.selected img {
+    border-width: 4px;
+    border-style: solid;
+    border-color: #3546ff
+  }
+}
+
+.view-image .modal-content {
+  height: 85vh;
+}
+
+video {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+}

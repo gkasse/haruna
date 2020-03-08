@@ -1,0 +1,16 @@
+.tree-root {
+  height: calc(100% - 38px);
+
+  ul {
+    margin: 0;
+  }
+
+  .tag-group {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .tag {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,19 @@
+<div class="modal-header">
+  タグを更新
+</div>
+<div class="modal-body">
+  <div class="form-group m-0">
+    <select class="form-control" [(ngModel)]="tagInput.group">
+      <option *ngFor="let group of tagGroups" [value]="group.code">{{ group.name }}</option>
+    </select>
+  </div>
+  <div class="form-group m-0">
+    <input class="form-control" [(ngModel)]="tagInput.name" placeholder="タグ名">
+  </div>
+</div>
+<div class="modal-footer">
+  <div class="btn-group">
+    <div class="btn btn-light" (click)="modal.dismiss()">キャンセル</div>
+    <div class="btn btn-success" (click)="update()">更新</div>
+  </div>
+</div>
