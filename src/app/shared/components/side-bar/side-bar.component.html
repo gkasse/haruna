@@ -1,0 +1,14 @@
+<aside class="h-100 overflow-scroll">
+  <ngb-tabset>
+    <ngb-tab title="ディレクトリ">
+      <ng-template ngbTabContent>
+        <app-directory-tree (selected)="change.emit($event)"></app-directory-tree>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="タグ">
+      <ng-template ngbTabContent>
+        <app-tag-tree (selected)="change.emit($event)"></app-tag-tree>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</aside>

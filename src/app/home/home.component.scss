@@ -1,0 +1,42 @@
+.root-container {
+  height: 100%;
+  display: flex;
+
+  background: url(../../assets/background.jpg) no-repeat center fixed;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisée */
+
+  .title {
+    color: white;
+    margin: 0;
+    padding: 50px 20px;
+  }
+}
+
+.panel-wrapper {
+  height: inherit;
+}
+
+app-directory-tree {
+  width: 20%;
+  height: 100%;
+  overflow-x: scroll;
+  line-break: loose;
+}
+
+.library {
+  line-break: strict;
+  width: 80%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+app-side-bar {
+  min-width: 280px;
+}
+
+app-gallery {
+  min-width: 930px;
+  max-height: 100vh;
+  overflow: hidden;
+}

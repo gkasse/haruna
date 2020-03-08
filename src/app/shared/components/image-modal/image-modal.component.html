@@ -1,0 +1,10 @@
+<div class="image w-100 h-100" (dblclick)="openNewWindow()" (contextmenu)="openContextMenu()">
+  <img *ngIf="file.isImage" [src]="'file:///' + src">
+  <video *ngIf="file.isVideo" style="width: 100%; height: 100%;" [src]="'file:///' + src" [volume]="0.1" [autoplay]="true" [controls]="true"></video>
+</div>
+<div class="before position-absolute" *ngIf="file.isImage && hasBefore" (click)="before.emit(src)">
+  <fa-icon [icon]="faArrowAltCircleLeft" size="3x"></fa-icon>
+</div>
+<div class="next position-absolute" *ngIf="file.isImage && hasNext" (click)="next.emit(src)">
+  <fa-icon [icon]="faArrowAltCircleRight" size="3x"></fa-icon>
+</div>

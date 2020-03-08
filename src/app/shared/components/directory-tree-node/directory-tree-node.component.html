@@ -1,0 +1,13 @@
+<div class="node pr-1">
+  <span class="pr-1" *ngIf="!path.isTerminus && !path.isOpen">
+    <fa-icon [icon]="faChevronRight"></fa-icon>
+  </span>
+  <span class="pr-1" *ngIf="!path.isTerminus && path.isOpen">
+    <fa-icon [icon]="faChevronDown"></fa-icon>
+  </span>
+  <span class="name" [class.file]="!path.isDirectory" [class.pl-3]="path.isTerminus" (click)="toggleDirectory(path)" (contextmenu)="openContextMenu(path)">{{ path.name }}</span>
+  <div *ngIf="path.children.length !== 0">
+    <app-directory-tree-node class="pl-4" (choiceDirectory)="choiceDirectory.emit($event)" *ngFor="let child of path.children" [path]="child"></app-directory-tree-node>
+  </div>
+</div>
+<br>

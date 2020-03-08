@@ -1,0 +1,3 @@
+<div class="tree-root pl-2" (contextmenu)="openContextMenu($event)">
+  <app-directory-tree-node (choiceDirectory)="selected.emit($event)" *ngFor="let drive of paths" [path]="drive"></app-directory-tree-node>
+</div>

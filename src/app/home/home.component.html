@@ -1,0 +1,4 @@
+<div class="root-container">
+  <app-side-bar class="col-3 p-0" (change)="target = $event"></app-side-bar>
+  <app-gallery class="col-9" [target]="target"></app-gallery>
+</div>

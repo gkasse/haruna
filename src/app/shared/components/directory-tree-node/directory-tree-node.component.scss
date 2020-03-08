@@ -1,0 +1,20 @@
+.node {
+  display: inline-block;
+  width: max-content;
+
+  .name {
+    cursor: pointer;
+  }
+}
+
+.nest {
+  padding-left: 10px;
+}
+
+.pr-1 {
+  padding-right: 5px;
+}
+
+.file {
+  padding-left: 15px;
+}
